@@ -49,25 +49,25 @@
         border-radius: 50%;
       }
 
-      .chat-area header{
+      .chat-area header {
         display: flex;
         align-items: center;
         padding: 18px 30px;
-        }
-        .chat-area header .back-icon{
+      }
+      .chat-area header .back-icon {
         color: #333;
         font-size: 18px;
-        }
-        .chat-area header img{
+      }
+      .chat-area header img {
         height: 45px;
         width: 45px;
         margin: 0 15px;
-        }
-        .chat-area header .details span{
+      }
+      .chat-area header .details span {
         font-size: 17px;
         font-weight: 500;
-        }
-        .chat-box{
+      }
+      .chat-box {
         position: relative;
         min-height: 500px;
         max-height: 500px;
@@ -75,61 +75,61 @@
         padding: 10px 30px 20px 30px;
         background: #f7f7f7;
         box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
-                    inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
-        }
-        .chat-box .text{
+          inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+      }
+      .chat-box .text {
         position: absolute;
         top: 45%;
         left: 50%;
         width: calc(100% - 50px);
         text-align: center;
         transform: translate(-50%, -50%);
-        }
-        .chat-box .chat{
+      }
+      .chat-box .chat {
         margin: 15px 0;
-        }
-        .chat-box .chat p{
+      }
+      .chat-box .chat p {
         word-wrap: break-word;
         padding: 8px 16px;
         box-shadow: 0 0 32px rgb(0 0 0 / 8%),
-                    0rem 16px 16px -16px rgb(0 0 0 / 10%);
-        }
-        .chat-box .outgoing{
+          0rem 16px 16px -16px rgb(0 0 0 / 10%);
+      }
+      .chat-box .outgoing {
         display: flex;
-        }
-        .chat-box .outgoing .details{
+      }
+      .chat-box .outgoing .details {
         margin-left: auto;
         max-width: calc(100% - 130px);
-        }
-        .outgoing .details p{
+      }
+      .outgoing .details p {
         background: #333;
         color: #fff;
         border-radius: 18px 18px 0 18px;
-        }
-        .chat-box .incoming{
+      }
+      .chat-box .incoming {
         display: flex;
         align-items: flex-end;
-        }
-        .chat-box .incoming img{
+      }
+      .chat-box .incoming img {
         height: 35px;
         width: 35px;
-        }
-        .chat-box .incoming .details{
+      }
+      .chat-box .incoming .details {
         margin-right: auto;
         margin-left: 10px;
         max-width: calc(100% - 130px);
-        }
-        .incoming .details p{
+      }
+      .incoming .details p {
         background: #fff;
         color: #333;
         border-radius: 18px 18px 18px 0;
-        }
-        .typing-area{
+      }
+      .typing-area {
         padding: 18px 30px;
         display: flex;
         justify-content: space-between;
-        }
-        .typing-area input{
+      }
+      .typing-area input {
         height: 45px;
         width: calc(100% - 58px);
         font-size: 16px;
@@ -137,8 +137,8 @@
         border: 1px solid #e6e6e6;
         outline: none;
         border-radius: 5px 0 0 5px;
-        }
-        .typing-area button{
+      }
+      .typing-area button {
         color: #fff;
         width: 55px;
         border: none;
@@ -150,11 +150,11 @@
         pointer-events: none;
         border-radius: 0 5px 5px 0;
         transition: all 0.3s ease;
-        }
-        .typing-area button.active{
+      }
+      .typing-area button.active {
         opacity: 1;
         pointer-events: auto;
-        }
+      }
     </style>
   </head>
   <body>
@@ -171,9 +171,40 @@
         <div class="chat-box">
           <div class="chat outgoing">
             <div class="details">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="chat incoming">
+            <img src="./profile.jpg" alt="" />
+            <div class="details">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="chat outgoing">
+            <div class="details">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="chat incoming">
+            <img src="./profile.jpg" alt="" />
+            <div class="details">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="chat outgoing">
+            <div class="details">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="chat incoming">
+            <img src="./profile.jpg" alt="" />
+            <div class="details">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="chat outgoing">
+            <div class="details">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
           </div>
           <div class="chat incoming">
@@ -183,6 +214,16 @@
             </div>
           </div>
         </div>
+
+        <form action="#" class="typing-area">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Type a message here..."
+          />
+          <button><i class="fab fa-telegram-plane"></i></button>
+        </form>
       </section>
     </div>
   </body>

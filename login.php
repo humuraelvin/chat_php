@@ -58,6 +58,7 @@
         border-radius: 5px;
         margin-bottom: 10px;
         border: 1px solid #f5c6cb;
+        display: none;
       }
 
       .form form .name-details {
@@ -120,6 +121,11 @@
         cursor: pointer;
       }
 
+      .form form .field i.active::before {
+        color: #333;
+        content: "\f070";
+      }
+
       .form .link {
         text-align: center;
         margin: 10px 0;
@@ -149,7 +155,7 @@
             <div class="field input">
               <label>Password</label>
               <input
-                type="text"
+                type="password"
                 name=""
                 id=""
                 placeholder="Enter a your password"
@@ -166,4 +172,6 @@
       </div>
     </div>
   </body>
+
+  <script src="./javascript/pass-show-hide.js"></script>
 </html>
