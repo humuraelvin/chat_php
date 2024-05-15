@@ -222,7 +222,7 @@
             id=""
             placeholder="Type a message here..."
           />
-          <button><i class="fab fa-telegram-plane"></i></button>
+          <button><i style="cursor:pointer;" class="fab fa-telegram-plane"></i></button>
         </form>
       </section>
     </div>
