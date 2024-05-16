@@ -143,9 +143,8 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="form login">
-        <header>Real Time Chatapp</header>
-        <section>
+        <section class="form login">
+          <header>Real Time Chatapp</header>
           <form action="#">
             <div class="error-txt">This is an error message!</div>
             <div class="field input">
@@ -169,7 +168,6 @@
           </form>
           <div class="link">Not yet signed up? <a href="">Signup now</a></div>
         </section>
-      </div>
     </div>
   </body>
 

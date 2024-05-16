@@ -144,9 +144,8 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="form signup">
-        <header>Real Time Chatapp</header>
-        <section>
+        <section class="form signup">
+           <header>Real Time Chatapp</header>
           <form action="#" enctype='multipart/form-data'>
             <div class="error-txt"></div>
             <div class="name-details">
@@ -183,7 +182,6 @@
           </form>
           <div class="link">Arleady signed up? <a href="">Login now</a></div>
         </section>
-      </div>
     </div>
   </body>
 
