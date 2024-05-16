@@ -147,27 +147,27 @@
       <div class="form signup">
         <header>Real Time Chatapp</header>
         <section>
-          <form action="#">
-            <div class="error-txt">This is an error message!</div>
+          <form action="#" enctype='multipart/form-data'>
+            <div class="error-txt"></div>
             <div class="name-details">
               <div class="field input">
                 <label>First Name</label>
-                <input type="text" name="" id="" placeholder="First Name" />
+                <input type="text" name="fname" id="" placeholder="First Name" />
               </div>
               <div class="field input">
                 <label>Last Name</label>
-                <input type="text" name="" id="" placeholder="Last Name" />
+                <input type="text" name="lname" id="" placeholder="Last Name" />
               </div>
             </div>
             <div class="field input">
               <label>Email Adress</label>
-              <input type="text" name="" id="" placeholder="Enter your email" />
+              <input type="text" name="email" id="" placeholder="Enter your email" />
             </div>
             <div class="field input">
               <label>Password</label>
               <input
                 type="password"
-                name=""
+                name="password"
                 id=""
                 placeholder="Enter a new password"
               />
@@ -175,7 +175,7 @@
             </div>
             <div class="field image">
               <label>Select Image</label>
-              <input type="file" name="" id="" />
+              <input type="file" name="image" id="" />
             </div>
             <div class="field button">
               <input type="submit" value="Cotinue to Chat" />
@@ -188,4 +188,5 @@
   </body>
 
   <script src="./javascript/pass-show-hide.js"></script>
+  <script src="./javascript/signup.js"></script>
 </html>
