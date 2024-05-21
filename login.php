@@ -146,7 +146,7 @@
         <section class="form login">
           <header>Real Time Chatapp</header>
           <form action="#">
-            <div class="error-txt">This is an error message!</div>
+            <div class="error-txt"></div>
             <div class="field input">
               <label>Email Adress</label>
               <input type="text" name="" id="" placeholder="Enter your email" />
@@ -172,4 +172,6 @@
   </body>
 
   <script src="./javascript/pass-show-hide.js"></script>
+  <script src="./javascript/login.js"></script>
+
 </html>
