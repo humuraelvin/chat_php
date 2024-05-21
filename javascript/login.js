@@ -1,6 +1,6 @@
 const form = document.querySelector(".login form"),
     continueBtn = form.querySelector(".button input"),
-    errorText = form.querySelector(".error-txt");
+    errorText = form.querySelector(".error-text");
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -12,16 +12,13 @@ continueBtn.onclick = () => {
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                let data = xhr.response.trim();
+                let data = xhr.response;
                 if (data === "success") {
                     location.href = "users.php";
                 } else {
                     errorText.style.display = "block";
-                    errorText.textContent = data || "An unknown error occurred. Please try again.";
+                    errorText.textContent = data;
                 }
-            } else {
-                errorText.style.display = "block";
-                errorText.textContent = "An error occurred during the request. Please try again.";
             }
         }
     }
