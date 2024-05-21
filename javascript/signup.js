@@ -12,16 +12,13 @@ continueBtn.onclick = () => {
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                let data = xhr.response.trim(); // Trim the response to remove any extraneous whitespace
+                let data = xhr.response;
                 if (data === "success") {
                     location.href = "users.php";
                 } else {
                     errorText.style.display = "block";
-                    errorText.textContent = data || "An unknown error occurred. Please try again."; // Fallback message
+                    errorText.textContent = data;
                 }
-            } else {
-                errorText.style.display = "block";
-                errorText.textContent = "An error occurred during the request. Please try again.";
             }
         }
     }
