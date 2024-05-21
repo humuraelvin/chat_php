@@ -1,14 +1,9 @@
 const form = document.querySelector(".login form"),
     continueBtn = form.querySelector(".button input"),
-    errorText = form.querySelector(".error-text");
-
-form.onsubmit = (e) => {
-    e.preventDefault();
-}
+    errorText = form.querySelector(".error-txt");
 
 continueBtn.onclick = () => {
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "php/login.php", true);
+    let formData = new FormData(form);
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
@@ -22,6 +17,6 @@ continueBtn.onclick = () => {
             }
         }
     }
-    let formData = new FormData(form);
+    xhr.open("POST", "php/login.php", true);
     xhr.send(formData);
 }
