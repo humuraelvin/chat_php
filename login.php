@@ -149,13 +149,13 @@
             <div class="error-txt"></div>
             <div class="field input">
               <label>Email Adress</label>
-              <input type="text" name="" id="" placeholder="Enter your email" />
+              <input type="text" name="email" id="" placeholder="Enter your email" />
             </div>
             <div class="field input">
               <label>Password</label>
               <input
                 type="password"
-                name=""
+                name="password"
                 id=""
                 placeholder="Enter a your password"
               />
