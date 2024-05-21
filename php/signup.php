@@ -19,4 +19,9 @@ $encrypt_pass = md5($password);
 
 $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
 VALUES ({$ran_id}, '{$fname}', '{$lname}', '{$email}', '{$encrypt_pass}', '{$image_name}', '{$status}')");
+
+if ($insert_query) {
+    echo "success";
+}
+
 ?>
