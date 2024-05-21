@@ -146,7 +146,7 @@
     <div class="wrapper">
         <section class="form signup">
            <header>Real Time Chatapp</header>
-          <form action="#" enctype='multipart/form-data'>
+          <form action="#" enctype='multipart/form-data' auto-complete='off'>
             <div class="error-txt"></div>
             <div class="name-details">
               <div class="field input">
@@ -180,7 +180,7 @@
               <input type="submit" value="Cotinue to Chat" />
             </div>
           </form>
-          <div class="link">Arleady signed up? <a href="">Login now</a></div>
+          <div class="link">Arleady signed up? <a href="login.php">Login now</a></div>
         </section>
     </div>
   </body>
