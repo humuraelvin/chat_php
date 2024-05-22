@@ -14,7 +14,7 @@ if (mysqli_num_rows($sqll) == 1) {
                     <div class="content">
                     <img src="./profile.jpg" alt="" />
                     <div class="details">
-                        <span>'.$row['fname']."".$row[lname]'</span>
+                        <span>'.$row['fname']."".$row['lname']'</span>
                         <p>This is a test message</p>
                     </div>
                     </div>
@@ -22,5 +22,7 @@ if (mysqli_num_rows($sqll) == 1) {
                 </a>';
     }
 }
+
+    echo "output";
 
 ?>
