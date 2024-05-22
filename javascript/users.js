@@ -10,7 +10,7 @@ searchIcon.onclick = () => {
         searchBar.value = "";
         searchBar.classList.remove("active");
     }
-}
+};
 
 setInterval(() => {
 
@@ -20,10 +20,15 @@ setInterval(() => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 let data = xhr.response.trim();
-                console.log(data);
+                usersList.innerHTML = data;
+            } else {
+                console.error("Failed to fetch users: " + xhr.statusText);
             }
         }
-    }
+    };
+    xhr.onerror = () => {
+        console.error("Request failed");
+    };
 
     xhr.send();
 
