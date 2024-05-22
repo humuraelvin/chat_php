@@ -22,8 +22,6 @@ if (mysqli_num_rows($sql) == 1) {
                 </a>';
     }
 }
-
-// Output the HTML content
 echo $output;
 
 ?>
