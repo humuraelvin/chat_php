@@ -1,6 +1,6 @@
 const searchBar = document.querySelector(".search input"),
-    searchIcon = document.querySelector(".users .search button"),
-    usersList = document.querySelector(".users .users-list");
+    searchIcon = document.querySelector(".search button"),
+    usersList = document.querySelector(".users-list");
 
 searchIcon.onclick = () => {
     searchBar.classList.toggle("show");
@@ -40,9 +40,12 @@ setInterval(() => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 let data = xhr.response;
-                usersList.innerHTML = data;
+                if (!searchBar.classList.contains("active")) {
+                    usersList.innerHTML = data;
+                }
             }
         }
     }
     xhr.send();
 }, 500);
+
