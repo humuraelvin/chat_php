@@ -12,7 +12,6 @@ searchIcon.onclick = () => {
     }
 }
 
-
 searchBar.onkeyup = () => {
     let searchTerm = searchBar.value;
     if (searchTerm != "") {
