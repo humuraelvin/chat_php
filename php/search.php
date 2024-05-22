@@ -1,15 +1,17 @@
 <?php
+    session_start();
+    include_once "config.php";
 
-include_once "config.php";
-$searchTerm = mysqli_real_escape_string($conn, $_POST['searchTerm']);
-$output = "";
-$sql = mysqli_query($conn, "SELECT * FROM users WHERE fname LIKE '%{$searchTerm}%' OR lname LIKE '%{$searchTerm}%'");
-if (mysqli_num_rows($sql) > 0) {
-    # code...
-}else {
-    $output .= "No user found related to your search Term";
-}
+    $outgoing_id = $_SESSION['unique_id'];
+    $searchTerm = mysqli_real_escape_string($conn, $_POST['searchTerm']);
 
-echo $output;
-
+    $sql = "SELECT * FROM users WHERE NOT unique_id = {$outgoing_id} AND (fname LIKE '%{$searchTerm}%' OR lname LIKE '%{$searchTerm}%') ";
+    $output = "";
+    $query = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($query) > 0){
+        include_once "data.php";
+    }else{
+        $output .= 'No user found related to your search term';
+    }
+    echo $output;
 ?>
