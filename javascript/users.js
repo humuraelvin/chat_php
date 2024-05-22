@@ -10,26 +10,20 @@ searchIcon.onclick = () => {
         searchBar.value = "";
         searchBar.classList.remove("active");
     }
-};
+}
 
 setInterval(() => {
-
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "php/users.php", true);
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                let data = xhr.response.trim();
-                usersList.innerHTML = data;
-            } else {
-                console.error("Failed to fetch users: " + xhr.statusText);
+                let data = xhr.response;
+                if (!searchBar.classList.contains("active")) {
+                    usersList.innerHTML = data;
+                }
             }
         }
-    };
-    xhr.onerror = () => {
-        console.error("Request failed");
-    };
-
+    }
     xhr.send();
-
 }, 500);
