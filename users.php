@@ -9,7 +9,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -191,7 +190,7 @@
   </head>
   <body>
 
-  <div class="wrapper">
+      <div class="wrapper">
     <section class="users">
       <header>
         <div class="content">
@@ -208,7 +207,7 @@
             <p><?php echo $row['status']; ?></p>
           </div>
         </div>
-        <a href="#" class="logout">Logout</a>
+        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
       </header>
       <div class="search">
         <span class="text">Select an user to start chat</span>
