@@ -1,6 +1,6 @@
 const searchBar = document.querySelector(".search input"),
-    searchIcon = document.querySelector(".search button"),
-    usersList = document.querySelector(".users-list");
+    searchIcon = document.querySelector(".users .search button"),
+    usersList = document.querySelector(".users .users-list");
 
 searchIcon.onclick = () => {
     searchBar.classList.toggle("show");
